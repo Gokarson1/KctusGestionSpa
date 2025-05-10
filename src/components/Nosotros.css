@@ -1,0 +1,69 @@
+/* Nosotros.css */
+
+#nosotros {
+    padding: 5rem 2rem;
+    background-color: #fff;
+    scroll-margin-top: 80px;
+  }
+  
+  #nosotros h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+    position: relative;
+    font-weight: 600;
+  }
+  
+  #nosotros h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #4A9800;
+    margin: 1rem auto 2rem;
+    border-radius: 2px;
+  }
+  
+  #nosotros p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  /* Efecto de aparición suave */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  #nosotros p {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #nosotros {
+      padding: 3rem 1rem;
+    }
+    
+    #nosotros h2 {
+      font-size: 2rem;
+    }
+    
+    #nosotros p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #nosotros h2::after {
+      width: 70px;
+      margin: 0.8rem auto 1.5rem;
+    }
+  }

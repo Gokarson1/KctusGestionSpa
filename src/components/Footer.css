@@ -1,0 +1,132 @@
+/* Variables de color */
+:root {
+  --footer-bg: #222222;
+  --text-color: #ffffff;
+  --accent-color: #4A9800;
+  --hover-color: #3c7c00;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estructura principal */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--text-color);
+  padding: 60px 0 30px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Estilos del logo */
+.footer-logo {
+  height: 200px;
+  width: auto;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  padding: 3px;
+  background-color: white;
+  object-fit: contain;
+}
+
+/* Títulos de sección */
+.footer-title {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Lista de contacto */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 15px;
+}
+
+.footer-link {
+  color: var(--text-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent-color);
+}
+
+/* Redes sociales */
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+/* Copyright */
+.footer-copyright {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .footer-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-column {
+    text-align: center;
+  }
+  
+  .footer-link {
+    justify-content: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .footer-logo {
+    margin: 0 auto;
+  }
+}
