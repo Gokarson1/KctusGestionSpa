@@ -1,136 +1,218 @@
-/* Contacto.css */
-
 #contacto {
-    padding: 5rem 2rem;
-    background-color: #fff;
-    scroll-margin-top: 80px;
+  padding: 5rem 2rem;
+  background-color: #fff;
+  scroll-margin-top: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#contacto h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+#contacto h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #4A9800;
+  margin: 1rem auto 2rem;
+  border-radius: 2px;
+}
+
+.contacto-container {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contacto-info {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-block h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.info-block p {
+  font-size: 1.2rem;
+  color: #4A9800;
+  font-weight: 600;
+}
+
+.redes-sociales {
+  margin-top: 3rem;
+}
+
+.redes-sociales p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  color: #4A9800;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+.contacto-form {
+  flex: 1;
+}
+
+.contacto-form form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  outline: none;
+  border-color: #4A9800;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(74, 152, 0, 0.2);
+}
+
+.contacto-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Nuevos estilos para validaciones */
+.input-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.error {
+  color: #ff4444;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+input.invalid, textarea.invalid {
+  border-color: #ff4444;
+}
+
+input.valid, textarea.valid {
+  border-color: #4A9800;
+}
+
+.contacto-form small {
+  display: block;
+  color: #666;
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+/* Estilo para el placeholder del teléfono */
+input[type="tel"]::placeholder {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.contacto-form button {
+  background-color: #4A9800;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+.contacto-form button:hover {
+  background-color: #3d8000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contacto-container {
+    flex-direction: column;
+  }
+  
+  .contacto-info {
+    order: 2;
+    margin-top: 2rem;
+  }
+  
+  .contacto-form {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacto-form input,
+  .contacto-form textarea {
+    padding: 0.8rem;
+  }
+  
+  .contacto-form button {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #contacto {
+    padding: 3rem 1rem;
   }
   
   #contacto h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #2c3e50;
-    position: relative;
+    font-size: 2rem;
   }
   
-  #contacto h2::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 4px;
-    background: #4A9800;
-    margin: 1rem auto 2rem;
-    border-radius: 2px;
+  .info-block h3 {
+    font-size: 1.5rem;
   }
   
-  #contacto > p {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
+  .social-icons {
+    justify-content: center;
   }
   
-  #contacto form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: grid;
-    gap: 1.5rem;
+  .contacto-form small {
+    font-size: 0.65rem;
   }
   
-  #contacto input,
-  #contacto textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    background-color: #f9f9f9;
+  .error {
+    font-size: 0.7rem;
   }
-  
-  #contacto input:focus,
-  #contacto textarea:focus {
-    outline: none;
-    border-color: #4A9800;
-    background-color: #fff;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-  }
-  
-  #contacto textarea {
-    resize: vertical;
-    min-height: 120px;
-  }
-  
-  #contacto button {
-    background-color: #4A9800;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  #contacto button:hover {
-    background-color: #4A9800;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  #contacto button:active {
-    transform: translateY(0);
-  }
-  
-  /* Animación de éxito */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .success-message {
-    animation: fadeIn 0.5s ease-out;
-    text-align: center;
-    color: #27ae60;
-    font-weight: 500;
-    margin-top: 1rem;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    #contacto {
-      padding: 3rem 1rem;
-    }
-    
-    #contacto h2 {
-      font-size: 2rem;
-    }
-    
-    #contacto > p {
-      font-size: 1rem;
-    }
-    
-    #contacto form {
-      gap: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    #contacto button {
-      width: 100%;
-      padding: 1rem;
-    }
-    
-    #contacto h2::after {
-      width: 70px;
-      margin: 0.8rem auto 1.5rem;
-    }
-  }
+}

@@ -16,7 +16,7 @@
   background: var(--header-bg);
   color: var(--text-color);
   z-index: 1000;
-  padding: 1rem 0;
+  padding: 1rem 32px;
   transition: var(--transition);
 }
 
@@ -41,7 +41,7 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 4rem;
+  /* padding: 0 4rem; */
   position: relative;
 }
 
@@ -190,9 +190,7 @@
 
 /* Responsive */
 @media (max-width: 950px) {
-  .header-container {
-    padding: 0 4rem;
-  }
+ 
 
   .hamburger {
     display: flex;

@@ -14,6 +14,18 @@ const Hero = () => {
         <h2>Estudio, desarrollo y ejecución de proyectos de interiores a medida</h2>
         {/* <button className="hero-button">Cotizar</button> */}
       </div>
+        <a
+            href="https://wa.me/56990122012"
+            className="whatsapp-float"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+              src="/images/whatsapp.png" // o usa un ícono de FontAwesome
+              alt="WhatsApp"
+            />
+        </a>
+
     </section>
   );
 };
