@@ -18,6 +18,7 @@ function App() {
       <Galeria id="galeria" />
       <Contacto id="contacto" />
       <Footer />
+      <Analytics />
     </div>
   );
 }
