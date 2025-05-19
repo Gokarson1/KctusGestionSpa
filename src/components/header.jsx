@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './Header.css';
+import './header.css';
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
