@@ -1,7 +1,7 @@
-import Hero from './components/hero';
-import Header from './components/header'
-import Servicios from './components/servicios';
-import Nosotros from './components/nosotros';
+import Hero from './components/Hero';
+import Header from './components/Header'
+import Servicios from './components/Servicios';
+import Nosotros from './components/Nosotros';
 import Contacto from './components/Contacto';
 import './App.css';
 import Galeria from './components/Galeria';
@@ -14,9 +14,6 @@ function App() {
     <div className="App">
       <Hero id="inicio" />
       <Header />
-      {/* <Header2 /> */}
-      
-
       <Servicios id="servicios" /> 
       <Nosotros id="nosotros" />
       <Galeria id="galeria" />
