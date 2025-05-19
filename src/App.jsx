@@ -1,5 +1,5 @@
-import Hero from './components/Hero';
-import Header from './components/Header'
+import Hero from './components/hero';
+import Header from './components/header'
 import Servicios from './components/Servicios';
 import Nosotros from './components/Nosotros';
 import Contacto from './components/Contacto';
