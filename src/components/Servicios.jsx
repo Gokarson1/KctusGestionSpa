@@ -43,7 +43,7 @@ const Servicios = () => {
         </div>
         {/* Servicio 6 */}
         <div className="servicio-card">
-          <img src="/images/gestion-de-proyectos.png" alt="Obras menores" className="servicio-imagen" />
+          <img src="/images/implementacion.png" alt="Obras menores" className="servicio-imagen" />
           <h3>Implementación de Soluciones</h3>
           <p>Nos encargamos de instalar e integrar todos los elementos del proyecto para que el resultado sea funcional, eficiente y listo para su uso.</p>
         </div>

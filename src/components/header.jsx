@@ -108,12 +108,10 @@ return (
           ))}
           
           {/* Botón Cotizar en móvil */}
+
           <button 
             className="quote-btn mobile-only"
-            onClick={() => {
-              // Aquí puedes agregar la lógica para el botón cotizar
-              setIsMenuOpen(false);
-            }}
+            onClick={(e) => handleClick('contacto', e)}
           >
             Cotizar
           </button>
@@ -121,7 +119,13 @@ return (
         </nav>
 
         {/* Botón Cotizar en desktop */}
-        <button className="quote-btn desktop-only">Cotizar</button>    
+
+        <button 
+          className="quote-btn desktop-only"
+          onClick={(e) => handleClick('contacto', e)}
+        >
+          Cotizar
+        </button> 
 
 
       </div>

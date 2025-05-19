@@ -1,10 +1,8 @@
 import Hero from './components/hero';
 import Header from './components/header'
-import Header2 from './components/header2'
-
 import Servicios from './components/servicios';
 import Nosotros from './components/nosotros';
-import Contacto from './components/contacto';
+import Contacto from './components/Contacto';
 import './App.css';
 import Galeria from './components/Galeria';
 import Footer from './components/Footer';

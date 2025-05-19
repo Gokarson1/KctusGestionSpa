@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Footer.css';
-
+import { faFacebookF, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -41,12 +41,18 @@ const Footer = () => {
           <div className="footer-column">
             <h3 className="footer-title">Síguenos</h3>
             <div className="social-links">
-              <a href="https://www.facebook.com/people/Kctus-Gestión-SpA/100063507849215/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <FontAwesomeIcon icon={['fab', 'facebook-f']} />
-              </a>
-              <a href="https://www.linkedin.com/in/kctus-gestión-spa-5702921b4/?originalSubdomain=cl" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
-              </a>
+              <div className="social-links">
+                <a href="https://www.facebook.com/people/Kctus-Gestión-SpA/100063507849215/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <FontAwesomeIcon icon={faFacebookF} /> 
+                </a>
+                <a href="https://www.instagram.com/kctusgestionspa?igsh=cmQ0ajA2OXE4amJx" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <FontAwesomeIcon icon={faInstagram} /> 
+                </a>
+                <a href="https://www.linkedin.com/in/kctus-gestión-spa-5702921b4/?originalSubdomain=cl" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <FontAwesomeIcon icon={faLinkedinIn} /> 
+                </a>
+                
+              </div>
             </div>
           </div>
         </div>

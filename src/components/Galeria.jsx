@@ -34,7 +34,7 @@ const Galeria = () => {
   },
   {
     id: 'recepcion',
-    nombre: 'Recepción',
+    nombre: 'Recepciones',
     fotos: [
       { id: 1, src: '/images/recepcion/foto (1).jpeg', titulo: 'Recepción 1' },
       { id: 2, src: '/images/recepcion/foto (2).jpeg', titulo: 'Recepción 2' },
@@ -44,7 +44,7 @@ const Galeria = () => {
   },
   {
     id: 'sala-de-espera',
-    nombre: 'Sala de Espera',
+    nombre: 'Salas de Espera',
     fotos: [
       { id: 1, src: '/images/sala-de-espera/foto (1).jpeg', titulo: 'Sala Espera 1' },
       { id: 2, src: '/images/sala-de-espera/foto (2).jpeg', titulo: 'Sala Espera 2' }
@@ -52,7 +52,7 @@ const Galeria = () => {
   },
   {
     id: 'sala-de-reunion',
-    nombre: 'Sala de Reunión',
+    nombre: 'Salas de Reunión',
     fotos: [
       { id: 1, src: '/images/sala-de-reunion/foto (1).jpeg', titulo: 'Reunión 1' },
       { id: 2, src: '/images/sala-de-reunion/foto (2).jpeg', titulo: 'Reunión 2' },
