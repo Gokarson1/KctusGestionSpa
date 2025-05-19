@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp, faFacebook, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './Contacto.css';
 import emailjs from '@emailjs/browser';
 
@@ -83,17 +83,21 @@ const Contacto = () => {
         <div className="contacto-info">
           <div className="info-block">
             <h3>¿Tienes un proyecto en mente? ¡Hablemos!</h3>
-            <p>Agenda tu primera asesoría gratis</p>
+            <h4 >Agenda tu primera asesoría gratis</h4>
+            <p >Creamos entornos que potencian tu productividad y estilo. Nuestro equipo está listo para ayudarte a construir el espacio que necesitas.</p>
           </div>
           
           <div className="redes-sociales">
             <p>Puedes hablarnos por:</p>
             <div className="social-icons">
-              <a href="#" className="social-icon">
+              <a href="https://wa.me/56990122012" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FontAwesomeIcon icon={faWhatsapp} size="2x" />
               </a>
               <a href="https://www.facebook.com/people/Kctus-Gestión-SpA/100063507849215/" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
+              </a>
+              <a href="https://www.instagram.com/kctusgestionspa?igsh=cmQ0ajA2OXE4amJx" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FontAwesomeIcon icon={faInstagram} size="2x" /> 
               </a>
               <a href="https://www.linkedin.com/in/kctus-gestión-spa-5702921b4/?originalSubdomain=cl" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
@@ -108,7 +112,7 @@ const Contacto = () => {
             <input 
               type="text" 
               name="user_name" 
-              placeholder="Nombre" 
+              placeholder="Nombre completo" 
               required 
             />
             
@@ -126,7 +130,7 @@ const Contacto = () => {
               <input 
                 type="tel" 
                 name="user_phone" 
-                placeholder="+56 912345678" 
+                placeholder="Celular" 
                 value={phone}
                 onChange={handlePhoneChange}
                 required 
