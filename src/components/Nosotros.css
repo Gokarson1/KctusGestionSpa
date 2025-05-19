@@ -1,69 +1,316 @@
 /* Nosotros.css */
 
+/* Estilos base de la sección */
 #nosotros {
-    padding: 5rem 2rem;
-    background-color: #fff;
-    scroll-margin-top: 80px;
+  padding: 5rem 2rem;
+  background-color: #fff;
+  scroll-margin-top: 80px;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+#nosotros h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+  position: relative;
+  font-weight: 600;
+}
+
+#nosotros h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #4A9800;
+  margin: 1rem auto 2rem;
+  border-radius: 2px;
+}
+
+.divider {
+  width: 100px;
+  height: 4px;
+  background: #4A9800;
+  margin: 0 auto 2rem;
+  border-radius: 2px;
+}
+
+.divider-small {
+  width: 60px;
+  height: 3px;
+  background: #4A9800;
+  margin: 0.5rem 0 1.5rem;
+  border-radius: 2px;
+}
+
+.nosotros-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.intro-section {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.intro-text strong {
+  color: #2c3e50;
+}
+
+.mision-vision {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.7;
+}
+
+.proceso-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.proceso-section h3 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.proceso-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.step {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: #4A9800;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.step p {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Sección de clientes */
+.clientes-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 6rem;
+  text-align: center;
+  position: relative;
+}
+
+.clientes-section h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.clientes-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+/* Contenedor del carrusel */
+.logos-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 2rem auto;
+  padding: 1rem 0;
+}
+
+/* Pista del carrusel */
+.logos-slide {
+  display: flex;
+  align-items: center;
+  will-change: transform;
+}
+
+/* Items del logo */
+.logo-item {
+  flex: 0 0 auto;
+  width: 150px; /* Aumentado para mejor visualización */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  flex-shrink: 0;
+}
+
+.logo-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: grayscale(30%);
+  opacity: 0.9;
+}
+
+.logo-item img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .logo-item {
+    width: 130px;
+    height: 70px;
   }
+  
+  .logos-slide {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* #nosotros {
+    padding: 3rem 1rem;
+  } */
   
   #nosotros h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #222;
-    position: relative;
-    font-weight: 600;
+    font-size: 2rem;
   }
   
+  .intro-text {
+    font-size: 1rem;
+  }
+  
+  .card {
+    min-width: 100%;
+  }
+  
+  .proceso-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .clientes-section h3 {
+    font-size: 1.5rem;
+  }
+  
+  .clientes-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .logo-item {
+    width: 110px;
+    height: 60px;
+  }
+  
+  .logos-slide {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
   #nosotros h2::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 4px;
-    background: #4A9800;
-    margin: 1rem auto 2rem;
-    border-radius: 2px;
+    width: 70px;
+    margin: 0.8rem auto 1.5rem;
   }
   
-  #nosotros p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
-    text-align: center;
-    padding: 0 1rem;
+  .proceso-section h3 {
+    font-size: 1.5rem;
   }
   
-  /* Efecto de aparición suave */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  .step {
+    padding: 1.2rem;
   }
   
-  #nosotros p {
-    animation: fadeIn 1s ease-out forwards;
+  .logos-slide {
+    gap: 1.5rem;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    #nosotros {
-      padding: 3rem 1rem;
-    }
-    
-    #nosotros h2 {
-      font-size: 2rem;
-    }
-    
-    #nosotros p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
+  .logo-item {
+    width: 90px;
+    height: 50px;
+    padding: 0 0.5rem;
   }
   
-  @media (max-width: 480px) {
-    #nosotros h2::after {
-      width: 70px;
-      margin: 0.8rem auto 1.5rem;
-    }
+  .divider {
+    margin-bottom: 1.5rem;
   }
+  
+  .clientes-section {
+    margin-top: 4rem;
+  }
+}
+
+/* Efectos de animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
